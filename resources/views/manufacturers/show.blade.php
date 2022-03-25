@@ -17,9 +17,9 @@
             @method('DELETE')
             @csrf
             <div class="card-body">
-                {{ $manufacturer->name }} | 
-                <b>Sales:</b> {{ $manufacturer->sales }} |
-                <b>Tech Support:</b> {{ $manufacturer->tech }} |
+                {{ $manufacturers->name }} | 
+                <b>Sales:</b> {{ $manufacturers->sales }} |
+                <b>Tech Support:</b> {{ $manufacturers->tech }} |
             </div>
         <button type="submit" class="btn btn-primary">DELETE</button>
         </form>
