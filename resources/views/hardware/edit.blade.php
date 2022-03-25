@@ -11,8 +11,9 @@
     <div class="col-md-12">
         <div class="card card-primary">
             <div class="card-body">              
-                <form method="put" action="{{ route('hardware.update', ['hardware'=>$hardware->id]) }}" >
+                <form method="post" action="{{ route('hardware.update', ['hardware'=>$hardware->id]) }}" >
     @csrf
+    <input type="hidden" name="_method" value="PUT">
         <div class="row">
 
         <x-adminlte-input name="name" label="Name" fgroup-class="col-md-6"  />

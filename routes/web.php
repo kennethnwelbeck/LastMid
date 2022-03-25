@@ -36,4 +36,3 @@ Route::get('/db-migrate', function () {
 });
 
 Route::resource('/hardware', HardwareController::class);
-Route::put('/hardware/{id}', [HardwareController::class, 'update']);
