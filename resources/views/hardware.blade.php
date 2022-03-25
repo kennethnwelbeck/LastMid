@@ -15,17 +15,7 @@
             </div>
             <div class="card-body">
                 @foreach($hardware AS $hardware)
-                @if($hardware->type =='Desktop'){
-                <li>{{ $hardware->name }} | 
-                <b>Type:</b> {{ $hardware->type }} |
-                <b>OS:</b> {{ $hardware->os }} |
-                <b>CPU:</b> {{ $hardware->cpu }} |
-                <b>GPU:</b> {{ $hardware->gpu }} |
-                <b>Storage:</b> {{ $hardware->storage }} |
-                <b>RAM:</b> {{ $hardware->ram }} |
-                <b>Price:</b> {{ $hardware->price }}</li>
-                }
-                @endif
+                <li><a href="{{ route('hardware.show', ['hardware'=>$hardware->name]) }} "></a></li>
                 @endforeach
             </div>
             <div class="card-footer">
