@@ -43,7 +43,7 @@ class HardwareController extends Controller
         'gpu' => $request->gpu,
         'storage' => $request->storage,
         'ram' => $request->ram,
-        'price' => $request->price,
+        'price' => $request->price
        ]);
 
        $hardware = Hardware::create();
