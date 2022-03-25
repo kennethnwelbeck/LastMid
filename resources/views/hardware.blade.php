@@ -16,7 +16,7 @@
             <div class="card-body">
                 Hardware
                 @foreach($hardware AS $hardware)
-                    <li><a href="{{ route('hardware.show',['hardware'=>$hardware->id]) }} "></a>
+                    <li><a href="{{ route('hardware.show', ['hardware'=>$hardware->name]) }} "></a>
                 @endforeach
             </div>
             <div class="card-footer">
