@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HardwareController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,3 +34,5 @@ Route::get('/db-migrate', function () {
     Artisan::call('migrate');
     echo Artisan::output();
 });
+
+Route::resource('/hardware', Hardwarecontroller::hardware);

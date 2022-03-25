@@ -46,7 +46,10 @@ class HardwareController extends Controller
         'price' => $request->price,
        ]);
 
-       return $this->index();
+       $hardware = Hardware::create();
+       $hardware->save();
+
+       return view('hardware.show', compact('hardware'));
     }
 
 

@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'title')
+@section('title', 'Hardware')
 
 @section('content_header')
     <h1>Hardware</h1>
@@ -11,13 +11,19 @@
     <div class="col-md-12">
         <div class="card card-default">
             <div class="card-header">
-                <a class ="btn btn-primary float-right">Add Hardware</a>
+                <a href="{{ route('hardware.create') }}" class="btn btn-primary float-right">Add Hardware</a>
             </div>
             <div class="card-body">
                 Hardware
-                @foreach($hardware)
+                @foreach($hardware AS $hardware)
                     <li><a href="{{ route('hardware.show',['hardware'=>$hardware->id]) }} "></a>
                 @endforeach
+            </div>
+            <div class="card-footer">
+            </div>
+        </div>
+    </div>
+</div>
 @stop
 
 @section('css')
