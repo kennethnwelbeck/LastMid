@@ -11,9 +11,9 @@
     <div class="col-md-12">
         <div class="card card-default">
         <div class="card-header">
-                <a href="{{ route('manufacturers.edit', ['manufacturer'=>$manufacturer->id]) }}" class="btn btn-primary float-right">Edit</a>   
+                <a href="{{ route('manufacturers.edit', ['manufacturer'=>$manufacturers->id]) }}" class="btn btn-primary float-right">Edit</a>   
         </div>
-        <form method="POST" action="{{ route('manufacturers.destroy', ['manufacturer'=>$manufacturer->id]) }}" >
+        <form method="POST" action="{{ route('manufacturers.destroy', ['manufacturer'=>$manufacturers->id]) }}" >
             @method('DELETE')
             @csrf
             <div class="card-body">
