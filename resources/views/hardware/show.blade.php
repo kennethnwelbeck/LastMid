@@ -11,7 +11,7 @@
     <div class="col-md-12">
         <div class="card card-primary">
             <div class="card-body">
-                { !! $hardware->name !!} | 
+                { !! $hardware->name; !!} | 
                 <b>Type:</b> {{ $hardware->type }} |
                 <b>OS:</b> {{ $hardware->os }} |
                 <b>CPU:</b> {{ $hardware->cpu }} |
