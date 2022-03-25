@@ -102,7 +102,7 @@ class HardwareController extends Controller
     {
         $hardware = Hardware::find($id);
         $hardware ->delete();
-        return redirect('/');
+        return redirect('/hardware');
     }
 }
 
