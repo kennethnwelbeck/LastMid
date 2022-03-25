@@ -11,3 +11,7 @@ class Hardware extends Model
     protected $fillable = ['name','type','os','cpu','gpu','storage','ram','price'];
     public $timestamps = false;
 }
+
+function manufacturer(){
+    return $this->belongsTo(Manufacturer::class);
+}
