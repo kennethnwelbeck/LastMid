@@ -12,25 +12,48 @@ class HardwareController extends Controller
     public function index()
     {
         $hardware = Hardware::all();
-        return view('hardware', compact('hardware'));
+        return view('hardware.index', compact('hardware'));
     }
 
 
     public function create()
     {
-        //
+        return view('hardware.create');
     }
 
 
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required',
+            'type' => 'required',
+            'os' => 'required',
+            'cpu' => 'required',
+            'gpu' => 'required',
+            'storage' => 'required',
+            'ram' => 'required',
+            'price' => 'required',
+       ]);
+
+       $hardware = Hardware::create([
+        'name' => $request->name,
+        'type' => $request->type,
+        'os' => $request->os,
+        'cpu' => $request->cpu,
+        'gpu' => $request->gpu,
+        'storage' => $request->storage,
+        'ram' => $request->ram,
+        'price' => $request->price,
+       ]);
+
+       return $this->index();
     }
 
 
     public function show($id)
     {
-        //
+        $hardware = Hardware::find($id);
+        return view('hardware.show', compact('hardware'));
     }
 
 
