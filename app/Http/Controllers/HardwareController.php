@@ -46,7 +46,10 @@ class HardwareController extends Controller
         'price' => $request->price,
        ]);
 
-       return $this->index();
+       $hardware = Hardware::create();
+       $hardware->save();
+
+       return view('hardware.show', compact('hardware'));
     }
 
 
@@ -65,8 +68,27 @@ class HardwareController extends Controller
 
     public function update(Request $request, $id)
     {
-        //
+        $hardware = Hardware::find($id);
+        $validated =$request->validate([
+            'name' => 'required',
+            'type' => 'required',
+            'os' => 'required',
+            'cpu' => 'required',
+            'gpu' => 'required',
+            'storage' => 'required',
+            'ram' => 'required',
+            'price' => 'required',
+
+        ]);
+
+        $hardware->fill();
+        $hardware->save();
+        return view('hardware.show',compact('hardware'));
     }
+
+
+
+
 
 
     public function destroy($id)
