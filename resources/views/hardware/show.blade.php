@@ -10,6 +10,9 @@
 <div class="row">
     <div class="col-md-12">
         <div class="card card-primary">
+        <div class="card-header">
+                <a href="{{ route('hardware.edit') }}" class="btn btn-primary float-right">Edit</a>
+            </div>
             <div class="card-body">
                 {{ $hardware->name }} | 
                 <b>Type:</b> {{ $hardware->type }} |

@@ -59,7 +59,8 @@ class HardwareController extends Controller
 
     public function edit($id)
     {
-        //
+        $hardware = Hardware::find($id);
+        return view('hardware.edit', compact('hardware'));
     }
 
 
