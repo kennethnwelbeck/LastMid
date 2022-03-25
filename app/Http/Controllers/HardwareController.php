@@ -12,7 +12,7 @@ class HardwareController extends Controller
     public function index()
     {
         $hardware = Hardware::all();
-        return view('hardware.index', compact('hardware'));
+        return view('hardware', compact('hardware'));
     }
 
 
