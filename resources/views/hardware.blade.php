@@ -3,7 +3,7 @@
 @section('title', 'title')
 
 @section('content_header')
-    <h1>Header</h1>
+    <h1>Hardware</h1>
 @stop
 
 @section('content')
@@ -11,9 +11,13 @@
     <div class="col-md-12">
         <div class="card card-default">
             <div class="card-header">
-                <a class ="btn btn-primary float-right">+ Add Hardware</a>
-
-    <p>Content here</p>
+                <a class ="btn btn-primary float-right">Add Hardware</a>
+            </div>
+            <div class="card-body">
+                Hardware
+                @foreach($hardware)
+                    <li><a href="{{ route('hardware.show',['hardware'=>$hardware->id]) }} "></a>
+                @endforeach
 @stop
 
 @section('css')
