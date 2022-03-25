@@ -100,7 +100,7 @@ class HardwareController extends Controller
 
     public function destroy($id)
     {
-        $hardware = hardware::find($id);
+        $hardware = Hardware::find($id);
         $hardware ->delete();
         return view('hardware');
     }
