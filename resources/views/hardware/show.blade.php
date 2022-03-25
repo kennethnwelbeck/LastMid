@@ -26,7 +26,7 @@
                 <b>RAM:</b> {{ $hardware->ram }} |
                 <b>Price:</b> {{ $hardware->price }} 
             </div>
-        <button type="submit" class="btn btn-primary float-right">DELETE</button>
+        <button type="submit" class="btn btn-primary">DELETE</button>
         </form>
             <div class="card-footer">
             </div>

@@ -36,3 +36,4 @@ Route::get('/db-migrate', function () {
 });
 
 Route::resource('/hardware', HardwareController::class);
+Route::resource('/manufacturers', ManufacturerController::class);
