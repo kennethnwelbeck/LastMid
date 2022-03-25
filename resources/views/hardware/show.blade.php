@@ -12,7 +12,7 @@
         <div class="card card-primary">
         <div class="card-header">
                 <a href="{{ route('hardware.edit',  ['hardware'=>$hardware->id]) }}" class="btn btn-success float-right">Edit</a>
-                <a href="{{ route('hardware.delete',  ['hardware'=>$hardware->id]) }}" class="btn btn-success float-right">Delete</a>
+                <a href="{{ route('hardware.destroy',  ['hardware'=>$hardware->id]) }}" class="btn btn-success float-right">Delete</a>
         </div>
             <div class="card-body">
                 {{ $hardware->name }} | 
