@@ -3,82 +3,87 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Manufacturer;
+
 
 class ManufacturerController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        //
+        $manufacturers = Manufacturer::all();
+        return view('manufacturers', compact('manufacturers'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-        //
+        return view('manufacturers.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'name' => 'required',
+            'sales' => 'required',
+            'tech' => 'required',
+       ]);
+
+       $manufacturers = Manufacturer::create([
+        'name' => $request->name,
+        'sales' => $request->sales,
+        'tech' => $request->tech,
+        
+       ]);
+
+       return view('manufacturers.show', compact('manufacturers'));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
-        //
+        $manufacturers = Manufacturer::find($id);
+        return view('manufacturers.show', compact('manufacturers'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
-        //
+        $manufacturers = Manufacturer::find($id);
+        return view('manufacturers.edit', compact('manufacturers'));
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
-        //
+        $manufacturers = Manufacturer::find($id);
+        $validated =$request->validate([
+            'name' => 'required',
+            'sales' => 'required',
+            'tech' => 'required',
+
+        ]);
+
+        $manufacturers->fill([
+        'name' => $request->name,
+        'sales' => $request->sales,
+        'tech' => $request->tech,
+    ]);
+        $manufacturers->save();
+        return view('manufacturers.show',compact('manufacturers'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
+
+
+
+
     public function destroy($id)
     {
-        //
+        $manufacturers = Manufacturer::find($id);
+        $manufacturers ->delete();
+        return redirect('/manufacturers');
     }
 }
+
