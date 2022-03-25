@@ -14,7 +14,7 @@
                 <a href="{{ route('manufacturers.create') }}" class="btn btn-primary float-right">Add Manufacturer</a>
             </div>
             <div class="card-body">
-                @foreach($manufacturers AS $manufacturers)
+                @foreach($manufacturers AS $manufacturer)
                 <li><a href="{{ route('manufacturers.show', ['manufacturers'=>$manufacturers->id]) }}">{{ $manufacturers->name }}</a></li>
                 @endforeach
             </div>
