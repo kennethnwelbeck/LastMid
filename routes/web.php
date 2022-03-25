@@ -35,4 +35,4 @@ Route::get('/db-migrate', function () {
     echo Artisan::output();
 });
 
-Route::resource('/hardware', HardwareController::hardware);
+Route::resource('/hardware', HardwareController::class);
