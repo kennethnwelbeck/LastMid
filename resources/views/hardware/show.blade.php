@@ -12,7 +12,7 @@
         <div class="card card-primary">
         <div class="card-header">
                 <a href="{{ route('hardware.edit',  ['hardware'=>$hardware->id]) }}" class="btn btn-primary float-right">Edit</a>
-            </div>
+        </div>
             <div class="card-body">
                 {{ $hardware->name }} | 
                 <b>Type:</b> {{ $hardware->type }} |

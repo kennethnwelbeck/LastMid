@@ -11,7 +11,7 @@
     <div class="col-md-12">
         <div class="card card-primary">
             <div class="card-body">              
-                <form method="post" action="{{ route('hardware.store') }}" >
+                <form method="post" action="{{ route('hardware.store', ['hardware'=>$hardware->id]) }}" >
     @csrf
         <div class="row">
 
