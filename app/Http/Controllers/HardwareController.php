@@ -79,7 +79,7 @@ class HardwareController extends Controller
 
         ]);
 
-        $hardware->fill();
+        $hardware->fill($request);
         $hardware->save();
         return view('hardware.show',compact('hardware'));
     }
