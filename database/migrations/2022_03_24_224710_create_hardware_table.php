@@ -15,14 +15,14 @@ class CreateHardwareTable extends Migration
     {
         Schema::create('hardware', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->nullable();
-            $table->string('type')->nullable();
-            $table->string('os')->nullable();
-            $table->string('cpu')->nullable();
-            $table->string('gpu')->nullable();
-            $table->string('storage')->nullable();
-            $table->string('ram')->nullable();
-            $table->string('price')->nullable();
+            $table->string('name');
+            $table->string('type');
+            $table->string('os');
+            $table->string('cpu');
+            $table->string('gpu');
+            $table->string('storage');
+            $table->string('ram');
+            $table->string('price');
             $table->timestamps();
         });
     }
