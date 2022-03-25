@@ -79,7 +79,16 @@ class HardwareController extends Controller
 
         ]);
 
-        $hardware->fill($request);
+        $hardware->fill([
+        'name' => $request->name,
+        'type' => $request->type,
+        'os' => $request->os,
+        'cpu' => $request->cpu,
+        'gpu' => $request->gpu,
+        'storage' => $request->storage,
+        'ram' => $request->ram,
+        'price' => $request->price,
+    ]);
         $hardware->save();
         return view('hardware.show',compact('hardware'));
     }
