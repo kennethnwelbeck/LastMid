@@ -9,9 +9,11 @@
 @section('content')
 <div class="row">
     <div class="col-md-12">
-        <div class="card card-primary">
+        <div class="card card-default">
         <div class="card-header">
                 <a href="{{ route('hardware.destroy',  ['hardware'=>$hardware->id]) }}" class="btn btn-primary float-right">Delete</a>
+                @method('DELETE')
+                @csrf
                 <a href="{{ route('hardware.edit',  ['hardware'=>$hardware->id]) }}" class="btn btn-primary float-right">Edit</a>   
         </div>
             <div class="card-body">
