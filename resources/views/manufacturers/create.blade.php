@@ -18,7 +18,7 @@
         <x-adminlte-input name="name" label="Name" fgroup-class="col-md-6" />
         <x-adminlte-input name="sales" label="Sales Contact" fgroup-class="col-md-6"  />
         <x-adminlte-input name="tech" label="Tech Support" fgroup-class="col-md-6"  />
-        <x-adminlte-select name="hardware_id" label="Hardware" fgroup-class="col-md-6" />
+        <x-adminlte-select name="hardware_id" label="Hardware" fgroup-class="col-md-6" >
         @foreach($manfacturers->hardware AS $hardware)   
         <option>{{ $hardware->name }}</option>
         @endforeach
