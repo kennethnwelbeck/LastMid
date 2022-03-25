@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/hardware', function () {
+    return view('hardware');
+});
+
+
 Route::get('/db-test', function () {
     try {         
          echo \DB::connection()->getDatabaseName();     
