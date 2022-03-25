@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Edit Hardware')
+@section('title', 'Edit Manufacturer')
 
 @section('content_header')
-    <h1>Edit Hardware</h1>
+    <h1>Edit Manufacturer</h1>
 @stop
 
 @section('content')
@@ -11,7 +11,7 @@
     <div class="col-md-12">
         <div class="card card-primary">
             <div class="card-body">              
-                <form method="post" action="{{ route('hardware.update', ['hardware'=>$hardware->id]) }}" >
+                <form method="post" action="{{ route('manufacturers.update', ['manufacturers'=>$manufacturers->id]) }}" >
     @csrf
     <input type="hidden" name="_method" value="PUT">
         <div class="row">
