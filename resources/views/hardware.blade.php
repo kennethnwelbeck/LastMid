@@ -14,9 +14,9 @@
                 <a href="{{ route('hardware.create') }}" class="btn btn-primary float-right">Add Hardware</a>
             </div>
             <div class="card-body">
-                Hardware
                 @foreach($hardware AS $hardware)
-                    <li>{{ $hardware->name }} | 
+                @if($hardware->type =='Computer'){
+                <li>{{ $hardware->name }} | 
                 <b>Type:</b> {{ $hardware->type }} |
                 <b>OS:</b> {{ $hardware->os }} |
                 <b>CPU:</b> {{ $hardware->cpu }} |
@@ -24,6 +24,8 @@
                 <b>Storage:</b> {{ $hardware->storage }} |
                 <b>RAM:</b> {{ $hardware->ram }} |
                 <b>Price:</b> {{ $hardware->price }}</li>
+                }
+                @endif
                 @endforeach
             </div>
             <div class="card-footer">
