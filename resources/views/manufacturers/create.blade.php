@@ -15,7 +15,7 @@
     @csrf
         <div class="row">
 
-        <x-adminlte-select name="type" label="Type" fgroup-class="col-md-6">
+        <x-adminlte-select name="type" label="Type" fgroup-class="col-md-6" />
         <x-adminlte-input name="sales" label="Sales Contact" fgroup-class="col-md-6"  />
         <x-adminlte-input name="tech" label="Tech Support" fgroup-class="col-md-6"  />
         <x-adminlte-button type="Submit" label="Submit" />
