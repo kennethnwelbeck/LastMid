@@ -9,4 +9,5 @@ class Hardware extends Model
 {
     use HasFactory;
     protected $fillable = ['name','type','os','cpu','gpu','storage','ram','price'];
+    public $timestamps = false;
 }
