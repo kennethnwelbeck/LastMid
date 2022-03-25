@@ -16,7 +16,14 @@
             <div class="card-body">
                 Hardware
                 @foreach($hardware AS $hardware)
-                    <li>{{ $hardware->name }}></></li>
+                    <li>{{ $hardware->name }} | 
+                <b>Type:</b> {{ $hardware->type }} |
+                <b>OS:</b> {{ $hardware->os }} |
+                <b>CPU:</b> {{ $hardware->cpu }} |
+                <b>GPU:</b> {{ $hardware->gpu }} |
+                <b>Storage:</b> {{ $hardware->storage }} |
+                <b>RAM:</b> {{ $hardware->ram }} |
+                <b>Price:</b> {{ $hardware->price }}</li>
                 @endforeach
             </div>
             <div class="card-footer">
