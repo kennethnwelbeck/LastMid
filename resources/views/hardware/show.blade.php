@@ -11,11 +11,11 @@
     <div class="col-md-12">
         <div class="card card-default">
         <div class="card-header">
-                <a href="{{ route('hardware.destroy',  ['hardware'=>$hardware->id]) }}" class="btn btn-primary float-right">Delete</a>
-                @method('DELETE')
-                @csrf
                 <a href="{{ route('hardware.edit',  ['hardware'=>$hardware->id]) }}" class="btn btn-primary float-right">Edit</a>   
         </div>
+        <form method="POST" action="{{ route('hardware.destroy',  ['hardware'=>$hardware->id]) }}" >
+            @method('DELETE')
+            @csrf
             <div class="card-body">
                 {{ $hardware->name }} | 
                 <b>Type:</b> {{ $hardware->type }} |
@@ -26,6 +26,8 @@
                 <b>RAM:</b> {{ $hardware->ram }} |
                 <b>Price:</b> {{ $hardware->price }} 
             </div>
+        <button type="submit">DELETE</button>
+        </form>
             <div class="card-footer">
             </div>
         </div>
