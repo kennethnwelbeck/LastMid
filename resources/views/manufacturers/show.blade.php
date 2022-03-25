@@ -11,15 +11,15 @@
     <div class="col-md-12">
         <div class="card card-default">
         <div class="card-header">
-                <a href="{{ route('manufacturers.edit', ['manufacturers'=>$manufacturers->id]) }}" class="btn btn-primary float-right">Edit</a>   
+                <a href="{{ route('manufacturers.edit', ['manufacturer'=>$manufacturer->id]) }}" class="btn btn-primary float-right">Edit</a>   
         </div>
-        <form method="POST" action="{{ route('manufacturers.destroy', ['manufacturers'=>$manufacturers->id]) }}" >
+        <form method="POST" action="{{ route('manufacturers.destroy', ['manufacturer'=>$manufacturer->id]) }}" >
             @method('DELETE')
             @csrf
             <div class="card-body">
-                {{ $manufacturers->name }} | 
-                <b>Sales:</b> {{ $manufacturers->sales }} |
-                <b>Tech Support:</b> {{ $manufacturers->tech }} |
+                {{ $manufacturer->name }} | 
+                <b>Sales:</b> {{ $manufacturer->sales }} |
+                <b>Tech Support:</b> {{ $manufacturer->tech }} |
             </div>
         <button type="submit" class="btn btn-primary">DELETE</button>
         </form>
