@@ -15,7 +15,7 @@
             </div>
             <div class="card-body">
                 @foreach($hardware AS $hardware)
-                @if($hardware->type =='Computer'){
+                @if($hardware->type =='Desktop'){
                 <li>{{ $hardware->name }} | 
                 <b>Type:</b> {{ $hardware->type }} |
                 <b>OS:</b> {{ $hardware->os }} |
