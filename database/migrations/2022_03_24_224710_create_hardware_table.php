@@ -23,6 +23,7 @@ class CreateHardwareTable extends Migration
             $table->string('storage');
             $table->string('ram');
             $table->string('price');
+            $table->timestamps();
         });
     }
 
