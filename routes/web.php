@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HardwareController;
 use App\Http\Controllers\ManufacturerController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\BuyerController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -40,3 +41,4 @@ Route::get('/db-migrate', function () {
 Route::resource('/hardware', HardwareController::class);
 Route::resource('/manufacturers', ManufacturerController::class);
 Route::resource('/orders', OrderController::class);
+Route::resource('/users', BuyerController::class);
