@@ -20,7 +20,7 @@ class ManufacturerController extends Controller
     public function create()
     {
         $hardware = Hardware::all();
-        return view('manufacturers.create');
+        return view('manufacturers.create', compact('hardware'));
     }
 
 
