@@ -19,10 +19,12 @@
         <x-adminlte-input name="sales" label="Sales Contact" fgroup-class="col-md-6"  />
         <x-adminlte-input name="tech" label="Tech Support" fgroup-class="col-md-6"  />
         <x-adminlte-select name="hardware_id[]" label="Hardware" fgroup-class="col-md-6" multiple="multiple"/>    
+        
         @foreach($hardware AS $hardware)
-        <option selected="selected" value="{{ $hardware->id }}" > {{ $hardware->name }}</option>
+        <option selected="selected" value="{{ $hardware->id }}">{{ $hardware->name }}</option>
         @endforeach
         </x-adminlte-select>
+        
         <x-adminlte-button type="Submit" label="Submit" />
         </div>
                 </form>
