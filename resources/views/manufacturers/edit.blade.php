@@ -20,7 +20,7 @@
         <x-adminlte-input name="tech" label="Tech Support" value="{{ old('tech', $manufacturers->tech) }}" fgroup-class="col-md-6"  />
         <x-adminlte-select name="hardware_id" label="Hardware" value="{{ old('hardware_id', $manufacturers->hardware_id) }}" fgroup-class="col-md-6">
         @foreach($hardware AS $hardware)   
-        <option>{{ $hardware->name }}</option>
+        <option>{{$hardware->id.' '.$hardware->name }}</option>
         @endforeach
         </x-adminlte-select>
         <x-adminlte-button type="Submit" label="Submit" />
