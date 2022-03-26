@@ -18,9 +18,9 @@
         <x-adminlte-input name="name" label="Name" fgroup-class="col-md-6" />
         <x-adminlte-input name="sales" label="Sales Contact" fgroup-class="col-md-6"  />
         <x-adminlte-input name="tech" label="Tech Support" fgroup-class="col-md-6"  />
-        <x-adminlte-select name="hardware_name" label="Hardware" fgroup-class="col-md-6" >    
+        <x-adminlte-select name="hardware_id" label="Hardware" fgroup-class="col-md-6" multiple>    
         @foreach($hardware AS $hardware)
-        <option value="{{ $hardware->name }}" > {{ $hardware->name }}</option>
+        <option value="{{ $hardware->id }}" > {{ $hardware->name }}</option>
         @endforeach
         </x-adminlte-select>
         <x-adminlte-button type="Submit" label="Submit" />
