@@ -51,7 +51,9 @@
 
         <x-adminlte-input name="price" label="Price" value="{{ old('price', $hardware->price) }}" fgroup-class="col-md-6"  />
 
-        <x-adminlte-textarea name="notes" label="Notes History" value="{{ old('notes', $hardware->notes) }}" fgroup-class="col-md-6" />
+        <x-adminlte-textarea name="notes" label="Notes History" value="" fgroup-class="col-md-6" >
+        {{ old('notes', $hardware->notes) }}
+        </x-adminlte-textarea>
 
         <x-adminlte-button type="Submit" label="Submit" />
         </div>
