@@ -44,14 +44,14 @@ class BuyerController extends Controller
 
     public function show($id)
     {
-        $orders = Buyer::find($id);
+        $buyers = Buyer::find($id);
         return view('buyers.show', compact('buyers'));
     }
 
 
     public function edit($id)
     {
-        $orders = Buyer::find($id);
+        $buyers = Buyer::find($id);
         return view('buyers.edit', compact('buyers'));
     }
 
