@@ -17,9 +17,9 @@
             @method('DELETE')
             @csrf
             <div class="card-body">
-                {{ $buyers->invoice }} | 
-                <b>Date:</b> {{ $buyers->date }} |
-                <b>Notes:</b> {{ $buyers->notes }} |
+                {{ $buyers->}} | 
+                <b>Name:</b> {{ $buyers->date }} {{ $buyers->last }}  |
+                <b>Email:</b> {{ $buyers->email }} |  <b>Phone:</b> {{ $buyers->phone }} |
             
 s            </div>
         <button type="submit" class="btn btn-primary">DELETE</button>

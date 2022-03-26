@@ -15,9 +15,11 @@
     @csrf
     <input type="hidden" name="_method" value="PUT">
         <div class="row">
-        <x-adminlte-input name="invoice" label="Invoice Number" fgroup-class="col-md-6" />
-        <x-adminlte-input name="date" label="Purchase Date" fgroup-class="col-md-6"  />
-        <x-adminlte-input name="notes" label="Notes" fgroup-class="col-md-6"  />
+        <x-adminlte-input name="first" label="First Name" fgroup-class="col-md-6" />
+        <x-adminlte-input name="last" label="Last Name" fgroup-class="col-md-6"  />
+        <x-adminlte-input name="email" label="Email" fgroup-class="col-md-6"  />
+        <x-adminlte-input name="phone" label="Phone Number" fgroup-class="col-md-6"  />
+    
         <x-adminlte-button type="Submit" label="Submit" />
         </div>
                 </form>
