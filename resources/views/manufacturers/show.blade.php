@@ -20,7 +20,7 @@
                 {{ $manufacturers->name }} | 
                 <b>Sales:</b> {{ $manufacturers->sales }} |
                 <b>Tech Support:</b> {{ $manufacturers->tech }} |
-                <b>Hardware:</b> {{ $manufacturers->hardware_id }}
+                <b>Hardware:</b> {{ $manufacturers->hardware_name }}
             </div>
         <button type="submit" class="btn btn-primary">DELETE</button>
         </form>
