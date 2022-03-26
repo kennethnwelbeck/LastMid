@@ -49,6 +49,9 @@
         </x-adminlte-select>
 
         <x-adminlte-input name="price" label="Price" fgroup-class="col-md-6"  />
+
+        <x-adminlte-textarea name="notes" label="Notes History" fgroup-class="col-md-6"  />
+
         <x-adminlte-button type="Submit" label="Submit" />
         </div>
                 </form>

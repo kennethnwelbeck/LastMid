@@ -24,7 +24,8 @@
                 <b>GPU:</b> {{ $hardware->gpu }} |
                 <b>Storage:</b> {{ $hardware->storage }} |
                 <b>RAM:</b> {{ $hardware->ram }} |
-                <b>Price:</b> {{ $hardware->price }} 
+                <b>Price:</b> {{ $hardware->price }}
+                <b>Notes History:</b> {{ $hardware-notes  }}
             </div>
         <button type="submit" class="btn btn-primary">DELETE</button>
         </form>

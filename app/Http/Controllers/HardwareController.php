@@ -33,6 +33,7 @@ class HardwareController extends Controller
             'storage' => 'required',
             'ram' => 'required',
             'price' => 'required',
+            'notes' => 'required',
        ]);
 
        $hardware = Hardware::create([
@@ -44,6 +45,7 @@ class HardwareController extends Controller
         'storage' => $request->storage,
         'ram' => $request->ram,
         'price' => $request->price,
+        'notes' => $request->notes,
        ]);
 
        return view('hardware.show', compact('hardware'));
@@ -76,6 +78,7 @@ class HardwareController extends Controller
             'storage' => 'required',
             'ram' => 'required',
             'price' => 'required',
+            'notes' => 'required',
 
         ]);
 
@@ -88,6 +91,7 @@ class HardwareController extends Controller
         'storage' => $request->storage,
         'ram' => $request->ram,
         'price' => $request->price,
+        'notes' => $request->notes,
     ]);
         $hardware->save();
         return view('hardware.show',compact('hardware'));

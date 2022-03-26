@@ -23,7 +23,7 @@ class CreateHardwareTable extends Migration
             $table->string('storage');
             $table->string('ram');
             $table->string('price');
-            $table->foreignId('manufacturer_id')->nullable()->constrained('manufacturer')->default(NULL);
+            $table->string('notes');
             $table->timestamps();
         });
     }
