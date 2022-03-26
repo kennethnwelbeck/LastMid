@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Manufacturer;
+use App\Models\Hardware;
 
 
 class ManufacturerController extends Controller
@@ -18,6 +19,7 @@ class ManufacturerController extends Controller
 
     public function create()
     {
+        $hardware = Hardware::all();
         return view('manufacturers.create');
     }
 
@@ -28,12 +30,14 @@ class ManufacturerController extends Controller
             'name' => 'required',
             'sales' => 'required',
             'tech' => 'required',
+            'hardware_id'=> 'required',
        ]);
 
        $manufacturers = Manufacturer::create([
         'name' => $request->name,
         'sales' => $request->sales,
         'tech' => $request->tech,
+        'hardware_id' => $request->hardware_id,
         
        ]);
 
@@ -62,6 +66,7 @@ class ManufacturerController extends Controller
             'name' => 'required',
             'sales' => 'required',
             'tech' => 'required',
+            'hardware_id' => 'required',
 
         ]);
 
@@ -69,6 +74,7 @@ class ManufacturerController extends Controller
         'name' => $request->name,
         'sales' => $request->sales,
         'tech' => $request->tech,
+        'hardware_id'=> $request->hardware_id,
     ]);
         $manufacturers->save();
         return view('manufacturers.show',compact('manufacturers'));
