@@ -74,11 +74,6 @@ class ManufacturerController extends Controller
         return view('manufacturers.show',compact('manufacturers'));
     }
 
-
-
-
-
-
     public function destroy($id)
     {
         $manufacturers = Manufacturer::find($id);

@@ -61,10 +61,9 @@ class OrderController extends Controller
             'invoice' => 'required',
             'date' => 'required',
             'notes' => 'required',
-
         ]);
 
-        $manufacturers->fill([
+        $orders->fill([
             'invoice' => $request->invoice,
             'date' => $request->date,
             'notes' => $request->notes,
@@ -77,7 +76,7 @@ class OrderController extends Controller
     public function destroy($id)
     {
         $orders = Order::find($id);
-        $orders ->delete();
+        $orders->delete();
         return redirect('/orders');
     }
 }
