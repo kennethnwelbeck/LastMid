@@ -23,7 +23,7 @@
         <option>Tablet</option>
         </x-adminlte-select> 
 
-        <x-adminlte-select name="os" label="OS" value="{{ old('os', $hardware->os) }}"fgroup-class="col-md-6">
+        <x-adminlte-select name="os" label="OS" value="{{ old('os', $hardware->os) }}" fgroup-class="col-md-6">
         <option>Windows</option>
         <option>MacOS</option>
         <option>Linux</option>
