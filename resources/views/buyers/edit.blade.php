@@ -11,7 +11,7 @@
     <div class="col-md-12">
         <div class="card card-primary">
             <div class="card-body">              
-                <form method="post" action="{{ route('buyers.update', ['order'=>$buyers->id]) }}" >
+                <form method="post" action="{{ route('buyers.update', ['buyer'=>$buyers->id]) }}" >
     @csrf
     <input type="hidden" name="_method" value="PUT">
         <div class="row">
