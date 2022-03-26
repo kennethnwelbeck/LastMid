@@ -51,7 +51,7 @@ class ManufacturerController extends Controller
     {
         $manufacturers = Manufacturer::find($id);
         $hardware = Hardware::all();
-        return view('manufacturers.show', compact('manufacturers'));
+        return view('manufacturers.show', compact('manufacturers, hardware'));
     }
 
 
