@@ -17,6 +17,11 @@
                 @foreach($manufacturers AS $manufacturer)
                 <li><a href="{{ route('manufacturers.show', ['manufacturer'=>$manufacturer->id]) }}">{{ $manufacturer->name }}</a></li>
                 @endforeach
+
+                @foreach($hardware AS $hardware)
+                <li><a href="{{ route('hardware.show', ['hardware'=>$hardware->id]) }}">{{ $hardware->name }}</a></li>
+                @endforeach
+
             </div>
             <div class="card-footer">
             </div>

@@ -13,5 +13,5 @@ class Manufacturer extends Model
 }
 
 function hardware(){
-    return $this->hasMany(Hardware::class);
+    return $this->belongsTo(Hardware::class);
 }
