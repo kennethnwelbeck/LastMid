@@ -15,7 +15,7 @@
     @csrf
     <input type="hidden" name="_method" value="PUT">
         <div class="row">
-        <x-adminlte-input name="name" label="Name" value="{{old('name')}}" fgroup-class="col-md-6" />
+        <x-adminlte-input name="name" label="Name" value="{{old('name', $manufacturers->name)}}" fgroup-class="col-md-6" />
         <x-adminlte-input name="sales" label="Sales Contact" fgroup-class="col-md-6"  />
         <x-adminlte-input name="tech" label="Tech Support" fgroup-class="col-md-6"  />
         <x-adminlte-select name="hardware_id" label="Hardware" fgroup-class="col-md-6">
