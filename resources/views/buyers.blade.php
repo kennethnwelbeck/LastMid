@@ -15,7 +15,7 @@
             </div>
             <div class="card-body">
                 @foreach($buyers AS $buyer)
-                <li><a href="{{ route('buyers.show', ['buyer'=>$buyer->id]) }}">{{ $buyer->name }}</a></li>
+                <li><a href="{{ route('buyers.show', ['buyer'=>$buyer->id]) }}">{{ $buyer->first} {{ $buyer->last }}}</a></li>
                 @endforeach
             </div>
             <div class="card-footer">
