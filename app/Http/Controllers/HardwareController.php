@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Hardware;
-use App\Models\Manufacturer;
+
 
 class HardwareController extends Controller
 {
@@ -12,7 +12,7 @@ class HardwareController extends Controller
     public function index()
     {
         $hardware = Hardware::all();
-        $manufacturers = Manufactuer::all();
+        $manufacturers = Manufacturer::all();
         return view('hardware', compact('hardware'));
     }
 
