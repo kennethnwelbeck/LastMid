@@ -31,6 +31,7 @@ class ManufacturerController extends Controller
             'sales' => 'required',
             'tech' => 'required',
             'hardware_id'=> 'required',
+            'hardware_name' => 'required',
        ]);
 
        $manufacturers = Manufacturer::create([
@@ -38,6 +39,7 @@ class ManufacturerController extends Controller
         'sales' => $request->sales,
         'tech' => $request->tech,
         'hardware_id' => $request->hardware_id,
+        'hardware_name' => $request->hardware_name,
         
        ]);
 
@@ -68,6 +70,7 @@ class ManufacturerController extends Controller
             'sales' => 'required',
             'tech' => 'required',
             'hardware_id' => 'required',
+            'hardware_name' => 'required',
 
         ]);
 
@@ -76,6 +79,7 @@ class ManufacturerController extends Controller
         'sales' => $request->sales,
         'tech' => $request->tech,
         'hardware_id'=> $request->hardware_id,
+        'hardware_name' => $request->hardware_name,
     ]);
         $manufacturers->save();
         return view('manufacturers.show',compact('manufacturers'));
