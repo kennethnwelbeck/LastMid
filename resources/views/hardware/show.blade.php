@@ -25,7 +25,9 @@
                 <b>Storage:</b> {{ $hardware->storage }} |
                 <b>RAM:</b> {{ $hardware->ram }} |
                 <b>Price:</b> {{ $hardware->price }}
-                <b>Notes History:</b> {{ $hardware-notes  }}
+                @if($hardware->notes != NULL)
+                <b>Notes History:</b> {{ $hardware-notes }}
+                @endif
             </div>
         <button type="submit" class="btn btn-primary">DELETE</button>
         </form>
