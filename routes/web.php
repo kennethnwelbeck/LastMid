@@ -41,4 +41,4 @@ Route::get('/db-migrate', function () {
 Route::resource('/hardware', HardwareController::class);
 Route::resource('/manufacturers', ManufacturerController::class);
 Route::resource('/orders', OrderController::class);
-Route::resource('/users', BuyerController::class);
+Route::resource('/buyers', BuyerController::class);
