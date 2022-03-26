@@ -21,7 +21,7 @@
                 <b>Sales:</b> {{ $manufacturers->sales }} |
                 <b>Tech Support:</b> {{ $manufacturers->tech }} |
                 @if($manufacturers->hardware_id != NULL)
-                <b>Hardware:</b><a href="{{ route('hardware.show', ['hardware'=>$manufacturer->hardware_id]) }}">{{ $manufacturers->hardware_id }}</a>
+                <b>Hardware:</b><a href="{{ route('hardware.show', ['hardware'=>$manufacturers->hardware_id]) }}">{{ $manufacturers->hardware_id }}</a>
                 @endif
             </div>
         <button type="submit" class="btn btn-primary">DELETE</button>
