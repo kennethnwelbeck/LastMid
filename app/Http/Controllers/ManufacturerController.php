@@ -55,7 +55,8 @@ class ManufacturerController extends Controller
     public function edit($id)
     {
         $manufacturers = Manufacturer::find($id);
-        return view('manufacturers.edit', compact('manufacturers'));
+        $hardware = Hardware::all();
+        return view('manufacturers.edit', compact('manufacturers', 'hardware'));
     }
 
 
