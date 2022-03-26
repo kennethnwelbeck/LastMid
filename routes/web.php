@@ -38,6 +38,11 @@ Route::get('/db-migrate', function () {
     echo Artisan::output();
 });
 
+Route::get('/rollback', function () {
+    Artisan::call('migrate:rollback');
+    echo Artisan::output();
+});
+
 Route::resource('/hardware', HardwareController::class);
 Route::resource('/manufacturers', ManufacturerController::class);
 Route::resource('/orders', OrderController::class);
