@@ -18,9 +18,9 @@
 
         <x-adminlte-input name="name" label="Name"  value="{{ old('name', $hardware->name) }}" fgroup-class="col-md-6"  />
         <x-adminlte-select name="type" label="Type" value="{{ old('type', $hardware->Type) }}" fgroup-class="col-md-6">
-        <option>Desktop</option>
-        <option>Laptop</option>
-        <option>Tablet</option>
+        <option {{ $hardware->type === "Desktop" ? "selected" : "" }}>Desktop</option>
+        <option {{ $hardware->type === "Laptop" ? "selected" : "" }}>Laptop</option>
+        <option {{ $hardware->type === "Desktop" ? "selected" : "" }}>Tablet</option>
         </x-adminlte-select> 
 
         <x-adminlte-select name="os" label="OS" value="{{ old('os', $hardware->os) }}" fgroup-class="col-md-6">
