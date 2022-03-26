@@ -13,7 +13,7 @@
         <div class="card-header">
                 <a href="{{ route('buyers.edit', ['buyer'=>$buyers->id]) }}" class="btn btn-primary float-right">Edit</a>   
         </div>
-        <form method="POST" action="{{ route('buyers.destroy', ['order'=>$buyers->id]) }}" >
+        <form method="POST" action="{{ route('buyers.destroy', ['buyer'=>$buyers->id]) }}" >
             @method('DELETE')
             @csrf
             <div class="card-body">
