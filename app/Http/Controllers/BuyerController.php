@@ -81,7 +81,7 @@ class BuyerController extends Controller
     {
         $buyers = Buyer::find($id);
         $buyers->delete();
-        return redirect('/users');
+        return redirect('/buyers');
     }
 }
 
