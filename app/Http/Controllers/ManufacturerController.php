@@ -37,7 +37,7 @@ class ManufacturerController extends Controller
         'name' => $request->name,
         'sales' => $request->sales,
         'tech' => $request->tech,
-        'hardware_id' => $request->hardware_id,
+        'hardware_id' => $request->hardware_id[],
        ]);
 
        return view('manufacturers.show', compact('manufacturers'));
@@ -75,7 +75,7 @@ class ManufacturerController extends Controller
         'name' => $request->name,
         'sales' => $request->sales,
         'tech' => $request->tech,
-        'hardware_id'=> $request->hardware_id,
+        'hardware_id'=> $request->hardware_id[],
     ]);
         $manufacturers->save();
         return view('manufacturers.show',compact('manufacturers'));
