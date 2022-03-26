@@ -14,7 +14,7 @@
                 <a href="{{ route('orders.create') }}" class="btn btn-primary float-right">Add Order</a>
             </div>
             <div class="card-body">
-                @foreach($orders AS orders)
+                @foreach($orders AS order)
                 <li><a href="{{ route('orders.show', ['order'=>$order->id]) }}">{{ $order->name }}</a></li>
                 @endforeach
             </div>
