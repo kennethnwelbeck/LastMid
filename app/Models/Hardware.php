@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Hardware extends Model
 {
     use HasFactory;
-    protected $fillable = ['name','type','os','cpu','gpu','storage','ram','price'];
+    protected $fillable = ['name','type','os','cpu','gpu','storage','ram','price','manufacturer_id',];
     public $timestamps = false;
 }
 
