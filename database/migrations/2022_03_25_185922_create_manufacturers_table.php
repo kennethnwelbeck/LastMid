@@ -18,7 +18,7 @@ class CreateManufacturersTable extends Migration
             $table->string('name');
             $table->string('sales');
             $table->string('tech');
-            $table->foreignId('hardware_id')->nullable()->constrained('hardware');
+            $table->foreignId('hardware_id')->nullable()->constrained('hardware')->defualt(NULL);
             $table->timestamps();
         });
     }

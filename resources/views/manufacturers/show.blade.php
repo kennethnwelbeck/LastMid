@@ -20,7 +20,7 @@
                 {{ $manufacturers->name }} | 
                 <b>Sales:</b> {{ $manufacturers->sales }} |
                 <b>Tech Support:</b> {{ $manufacturers->tech }} |
-                @if($manufacturer->hardware_id /= NULL)
+                @if($manufacturer->hardware_id != NULL)
                 <b>Hardware:</b><a href="{{ route('hardware.show', ['hardware'=>$manufacturer->hardware_id]) }}">{{ $manufacturers->hardware_id }}</a>
                 @endif
             </div>
