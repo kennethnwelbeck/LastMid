@@ -67,7 +67,7 @@ class OrderController extends Controller
         $manufacturers->fill([
             'invoice' => $request->invoice,
             'date' => $request->date,
-            'notes' => $request-notes,
+            'notes' => $request->notes,
         ]);
 
         $orders->save();
