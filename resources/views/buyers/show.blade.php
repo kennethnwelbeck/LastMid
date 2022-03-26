@@ -17,8 +17,7 @@
             @method('DELETE')
             @csrf
             <div class="card-body">
-                {{ $buyers->}} | 
-                <b>Name:</b> {{ $buyers->date }} {{ $buyers->last }}  |
+                <b>Name:</b> {{ $buyers->first}} {{ $buyers->last }}  |
                 <b>Email:</b> {{ $buyers->email }} |  <b>Phone:</b> {{ $buyers->phone }} |
             
 s            </div>
