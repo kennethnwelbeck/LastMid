@@ -19,10 +19,10 @@
             <div class="card-body">
                 <b>Name:</b> {{ $buyers->first}} {{ $buyers->last }}  |
                 <b>Email:</b> {{ $buyers->email }} |  <b>Phone:</b> {{ $buyers->phone }} |
-                @if($manufacturers->hardware_id != NULL)
+                @if($buyers->hardware_id != NULL)
                 @foreach($hardware AS $hardware)
-                @if($hardware->id == $manufacturers->hardware_id)
-                <b>Hardware:</b><a href="{{ route('hardware.show', ['hardware'=>$manufacturers->hardware_id]) }}">{{ $hardware->id.' '.$hardware->name }}</a>
+                @if($hardware->id == $buyers->hardware_id)
+                <b>Purchased Hardware:</b><a href="{{ route('hardware.show', ['hardware'=>$buyers->hardware_id]) }}">{{ $hardware->id.' '.$hardware->name }}</a>
                 @endif
                 @endforeach
                 @endif
