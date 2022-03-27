@@ -30,7 +30,7 @@
                 @if($orders->hardware_id != NULL)
                 @foreach($hardware AS $hardware)
                 @if($hardware->id == $orders->hardware_id)
-                <b>Purchased Hardware:</b><a href="{{ route('hardware.show', ['hardware'=>$orders->hardware_id]) }}">{{ $hardware->id.' '.$hardware->name.' '.$hardware->price }}</a>
+                <b>Purchased Hardware:</b><a href="{{ route('hardware.show', ['hardware'=>$orders->hardware_id]) }}">{{ $hardware->id.' '.$hardware->name'}}</a> | <b>Price:</b>{{ $hardware->price }}
                 @endif
                 @endforeach
                 @endif 
