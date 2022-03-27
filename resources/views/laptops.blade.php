@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Desktops')
+@section('title', 'Laptops')
 
 @section('content_header')
-    <h1>Desktops</h1>
+    <h1>Laptops</h1>
 @stop
 
 @section('content')
@@ -14,7 +14,7 @@
             </div>
             <div class="card-body">
                 @foreach($hardware AS $hardware)
-                @if($hardware->type == "Desktop")
+                @if($hardware->type == "Laptop")
                 <li><a href="{{ route('hardware.show', ['hardware'=>$hardware->id]) }}">{{ $hardware->name }}</a></li>
                 @endif
                 @endforeach

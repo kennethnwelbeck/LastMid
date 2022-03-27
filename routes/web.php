@@ -6,6 +6,8 @@ use App\Http\Controllers\ManufacturerController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\BuyerController;
 use App\Http\Controllers\DesktopController;
+use App\Http\Controllers\LaptopController;
+use App\Http\Controllers\TabletController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -52,6 +54,8 @@ Route::get('/reset', function () {
 
 Route::resource('/hardware', HardwareController::class);
 Route::resource('/desktops', DesktopController::class);
+Route::resource('/laptops', LaptopController::class);
+Route::resource('/tablets', TabletController::class);
 Route::resource('/manufacturers', ManufacturerController::class);
 Route::resource('/orders', OrderController::class);
 Route::resource('/buyers', BuyerController::class);
