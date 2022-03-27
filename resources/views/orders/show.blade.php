@@ -21,7 +21,7 @@
                 <b>Date:</b> {{ $orders->date }} |
                 @if($orders->buyer_id != NULL)
                 @foreach($buyers AS $buyer)
-                @if($buyers->id == $orders->buyer_id)
+                @if($buyer->id == $orders->buyer_id)
                 <b>User:</b><a href="{{ route('buyers.show', ['buyer'=>$orders->buyer_id]) }}">{{ $buyer->id.' '.$buyer->first.' '.$buyer->last }}</a> |
                 @endif
                 @endforeach
