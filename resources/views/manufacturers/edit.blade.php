@@ -18,7 +18,7 @@
         <x-adminlte-input name="name" label="Name" value="{{ old('name', $manufacturers->name) }}" fgroup-class="col-md-6" />
         <x-adminlte-input name="sales" label="Sales Contact" value="{{ old('sales', $manufacturers->sales) }}" fgroup-class="col-md-6"  />
         <x-adminlte-input name="tech" label="Tech Support" value="{{ old('tech', $manufacturers->tech) }}" fgroup-class="col-md-6"  />
-        <x-adminlte-select name="hardware_id" label="Hardware" fgroup-class="col-md-6">
+        <x-adminlte-select name="hardware_id" label="Hardware" value="{{ old('hardware_id', $manufacturers->hardware_id) }}"fgroup-class="col-md-6">
         @foreach($hardware AS $hardware)   
         <option value="{{ $hardware->id }}" {{ $manufacturers->hardware_id == $hardware->id ? "selected" : "" }} >{{$hardware->id.' '.$hardware->name }}</option>
         @endforeach
