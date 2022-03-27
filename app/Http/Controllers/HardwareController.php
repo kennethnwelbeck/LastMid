@@ -18,7 +18,7 @@ class HardwareController extends Controller
     public function desktops()
     {
         $hardware = Hardware::all();
-        return view('desktops', compact('hardware'));
+        return view('/desktops', compact('hardware'));
     }
 
     public function create()

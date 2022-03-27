@@ -50,7 +50,7 @@ Route::get('/reset', function () {
 
 
 Route::resource('/hardware', HardwareController::class);
-Route::resource('/desktops', HardwareController::class);
+Route::resource('/hardware/desktops', HardwareController::class);
 Route::resource('/manufacturers', ManufacturerController::class);
 Route::resource('/orders', OrderController::class);
 Route::resource('/buyers', BuyerController::class);
