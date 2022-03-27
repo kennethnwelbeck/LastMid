@@ -19,6 +19,11 @@
         <x-adminlte-input name="last" label="Last Name" fgroup-class="col-md-6"  />
         <x-adminlte-input name="email" label="Email" fgroup-class="col-md-6"  />
         <x-adminlte-input name="phone" label="Phone Number" fgroup-class="col-md-6"  />
+        <x-adminlte-select name="hardware_id" label="Hardware" fgroup-class="col-md-6" >    
+        @foreach($hardware AS $hardware)
+        <option value="{{ $hardware->id }}"> {{$hardware->id.' '.$hardware->name }} </option>
+        @endforeach
+        </x-adminlte-select>
     
         <x-adminlte-button type="Submit" label="Submit" />
         </div>
