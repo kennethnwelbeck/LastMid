@@ -53,3 +53,4 @@ Route::resource('/hardware', HardwareController::class);
 Route::resource('/manufacturers', ManufacturerController::class);
 Route::resource('/orders', OrderController::class);
 Route::resource('/buyers', BuyerController::class);
+Route::view('desktops', 'hardware.desktops');
