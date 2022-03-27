@@ -1,9 +1,9 @@
 @extends('adminlte::page')
 
-@section('title', 'Manufacturers')
+@section('title', 'View By Manufacturer')
 
 @section('content_header')
-    <h1>Manufacturers</h1>
+    <h1>View By Manufacturer</h1>
 @stop
 
 @section('content')
@@ -16,7 +16,7 @@
             <div class="card-body">
                 @foreach($manufacturers AS $manufacturer)
                 <li><a href="{{ route('manufacturers.show', ['manufacturer'=>$manufacturer->id]) }}">{{ $manufacturer->name }}</a> | 
-                <b>Hardware ID:</b><a href="{{ route('hardware.show', ['manufacturer'=>$manufacturer->hardware_id]) }}">{{ $manufacturer->hardware_id }}</a></li>
+                <b>Hardware ID:</b><a href="{{ route('hardware.show', ['hardware'=>$manufacturer->hardware_id]) }}">{{ $manufacturer->hardware_id }}</a></li>
                 @endforeach
 
             </div>
