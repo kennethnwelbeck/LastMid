@@ -16,6 +16,6 @@ function hardware(){
     return $this->hasMany(Hardware::class);
 }
 
-function buyer(){
+function buyers(){
     return $this->belongsTo(Buyer::class);
 }

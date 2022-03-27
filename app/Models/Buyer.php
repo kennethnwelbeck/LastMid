@@ -17,6 +17,6 @@ function hardware(){
     return $this->hasMany(Hardware::class);
 }
 
-function order(){
+function orders(){
     return $this->hasMany(Order::class);
 }
