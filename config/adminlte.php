@@ -236,7 +236,7 @@ return [
             
                     'text' => 'Category',
                     'url'  => '#',
-                    'submenu' =>[
+                    'submenu' => [ 
                         [
                             'text' => 'Computers',
                             'url'  => '#',

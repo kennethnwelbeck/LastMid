@@ -15,6 +15,20 @@ class HardwareController extends Controller
         return view('hardware', compact('hardware'));
     }
 
+    public function computer(){
+        $hardware = Hardware::all();
+        return view('hardware.computer', compact('hardware'));
+    }
+
+    public function laptop(){
+        $hardware = Hardware::all();
+        return view('hardware.laptop', compact('hardware'));
+    }
+    public function tablet(){
+        $hardware = Hardware::all();
+        return view('hardware.tablet', compact('hardware'));
+    }
+
 
     public function create()
     {
