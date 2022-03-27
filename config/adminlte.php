@@ -233,7 +233,7 @@ return [
         [
             'text'    => 'View Hardware By',
             'submenu' => [
-                [
+            
                     'text' => 'Category',
                     'url'  => '#',
                     'submenu' =>[
@@ -249,7 +249,7 @@ return [
                             'text' => 'Tablets',
                             'url'  => '#',
                         ],
-                    ]
+                    
                 ],
                 [
                     'text' => 'Manufacturer',
@@ -274,6 +274,7 @@ return [
             'text' => 'Users',
             'url'  => '#',
         ],
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -427,5 +428,5 @@ return [
     |
     */
 
-    'livewire' => false,
+      'livewire' => false,
 ];
