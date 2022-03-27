@@ -19,7 +19,15 @@
             <div class="card-body">
                 <b>Name:</b> {{ $buyers->first}} {{ $buyers->last }}  |
                 <b>Email:</b> {{ $buyers->email }} |  <b>Phone:</b> {{ $buyers->phone }} |
-                        </div>
+                @if($manufacturers->hardware_id != NULL)
+                @foreach($hardware AS $hardware)
+                @if($hardware->id == $manufacturers->hardware_id)
+                <b>Hardware:</b><a href="{{ route('hardware.show', ['hardware'=>$manufacturers->hardware_id]) }}">{{ $hardware->id.' '.$hardware->name }}</a>
+                @endif
+                @endforeach
+                @endif
+            
+            </div>
         <button type="submit" class="btn btn-primary">DELETE</button>
         </form>
             <div class="card-footer">
