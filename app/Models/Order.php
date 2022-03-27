@@ -17,5 +17,5 @@ function hardware(){
 }
 
 function buyer(){
-    return $this->hasOne(Buyer::class);
+    return $this->belongsTo(Buyer::class);
 }
