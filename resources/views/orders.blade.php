@@ -15,7 +15,7 @@
             </div>
             <div class="card-body">
                 @foreach($orders AS $order)
-                <li><a href="{{ route('orders.show', ['order'=>$order->id]) }}">{{ $order->invoice }}</a></li>
+                <li><b>Invoice Number:</b> <a href="{{ route('orders.show', ['order'=>$order->id]) }}">{{ $order->invoice }}</a></li>
                 @endforeach
             </div>
             <div class="card-footer">

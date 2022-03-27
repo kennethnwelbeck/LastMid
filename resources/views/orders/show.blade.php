@@ -17,7 +17,7 @@
             @method('DELETE')
             @csrf
             <div class="card-body">
-                {{ $orders->invoice }} | 
+                <b>Invoice Number:</b> {{ $orders->invoice }} | 
                 <b>Date:</b> {{ $orders->date }} |
                 @if($orders->buyer_id != NULL)
                 @foreach($buyers AS $buyer)

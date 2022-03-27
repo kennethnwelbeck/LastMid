@@ -11,11 +11,10 @@
     <div class="col-md-12">
         <div class="card card-default">
             <div class="card-header">
-                <a href="{{ route('manufacturers.create') }}" class="btn btn-primary float-right">Add Manufacturer</a>
             </div>
             <div class="card-body">
                 @foreach($manufacturers AS $manufacturer)
-                <li><a href="{{ route('manufacturers.show', ['manufacturer'=>$manufacturer->id]) }}">{{ $manufacturer->name }}</a> | 
+                <li><b>Manufacturer Name:</b><a href="{{ route('manufacturers.show', ['manufacturer'=>$manufacturer->id]) }}">{{ $manufacturer->name }}</a> | 
                 <b>Hardware ID:</b><a href="{{ route('hardware.show', ['hardware'=>$manufacturer->hardware_id]) }}">{{ $manufacturer->hardware_id }}</a></li>
                 @endforeach
 

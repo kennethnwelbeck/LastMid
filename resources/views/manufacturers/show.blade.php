@@ -17,8 +17,8 @@
             @method('DELETE')
             @csrf
             <div class="card-body">
-                {{ $manufacturers->name }} | 
-                <b>Sales:</b> {{ $manufacturers->sales }} |
+                <b>Manufacturer Name:</b> {{ $manufacturers->name }} | 
+                <b>Sales Number:</b> {{ $manufacturers->sales }} |
                 <b>Tech Support:</b> {{ $manufacturers->tech }} |
                 @if($manufacturers->hardware_id != NULL)
                 @foreach($hardware AS $hardware)
