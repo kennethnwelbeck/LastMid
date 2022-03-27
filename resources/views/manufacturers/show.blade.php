@@ -21,7 +21,7 @@
                 <b>Sales:</b> {{ $manufacturers->sales }} |
                 <b>Tech Support:</b> {{ $manufacturers->tech }} |
                 @if($manufacturers->hardware_id != NULL)
-                @foreach($hardware as $hardware)
+                @foreach(manufacturers->hardware AS $hardware)
                 @if($hardware->id == $manufacturers->hardware_id)
                 <b>Hardware:</b><a href="{{ route('hardware.show', ['hardware'=>$manufacturers->hardware_id]) }}">{{ $hardware->id.' '.$hardware->name }}</a>
                 @endif
