@@ -19,8 +19,7 @@
             <div class="card-body">
                 <b>Name:</b> {{ $buyers->first}} {{ $buyers->last }}  |
                 <b>Email:</b> {{ $buyers->email }} |  <b>Phone:</b> {{ $buyers->phone }} |
-            
-s            </div>
+                        </div>
         <button type="submit" class="btn btn-primary">DELETE</button>
         </form>
             <div class="card-footer">
