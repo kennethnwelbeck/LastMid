@@ -249,11 +249,11 @@ return [
             
                 [
                     'text' => 'Manufacturer',
-                    'url'  => '',
+                    'url'  => '/viewmanu',
                 ],
                 [
                     'text' => 'User',
-                    'url'  => '#',
+                    'url'  => 'viewuser',
                 ],
             ],
             
