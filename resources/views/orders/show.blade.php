@@ -20,7 +20,7 @@
                 {{ $orders->invoice }} | 
                 <b>Date:</b> {{ $orders->date }} |
                 @if($orders->buyers_id != NULL)
-                @foreach($buyers as $buyer)
+                @foreach($buyers AS $buyer)
                 @if($buyers->id == $orders->buyer_id)
                 <b>User:</b><a href="{{ route('buyers.show', ['buyer'=>$orders->buyer_id]) }}">{{ $buyer->id.' '.$buyer->first.' '.$buyer->last }}</a> |
                 @endif
@@ -28,7 +28,7 @@
                 @endif
 
                 @if($orders->hardware_id != NULL)
-                @foreach($hardware as $hardware)
+                @foreach($hardware AS $hardware)
                 @if($hardware->id == $orders->hardware_id)
                 <b>Purchased Hardware:</b><a href="{{ route('hardware.show', ['hardware'=>$orders->hardware_id]) }}">{{ $hardware->id.' '.$hardware->name.' '.hardware->price }}</a>
                 @endif
