@@ -43,6 +43,12 @@ Route::get('/rollback', function () {
     echo Artisan::output();
 });
 
+Route::get('/reset', function () {
+    Artisan::call('migrate:reset');
+    echo Artisan::output();
+});
+
+
 Route::resource('/hardware', HardwareController::class);
 Route::resource('/manufacturers', ManufacturerController::class);
 Route::resource('/orders', OrderController::class);
