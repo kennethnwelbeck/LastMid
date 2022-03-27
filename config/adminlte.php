@@ -232,25 +232,21 @@ return [
         ], 
         [
             'text'    => 'View Hardware By',
-            'submenu' => [
-            
-                    'text' => 'Category',
-                    'url'  => '#',
-                    'submenu' => [ 
+            'submenu' => [ 
                         [
-                            'text' => 'Computers',
+                            'text' => 'Category: Computers',
                             'url'  => '#',
                         ],
                         [
-                            'text' => 'Laptops',
+                            'text' => 'Category: Laptops',
                             'url'  => '#',
                         ],
                         [
-                            'text' => 'Tablets',
+                            'text' => 'Category: Tablets',
                             'url'  => '#',
                         ],
                     
-                ],
+            
                 [
                     'text' => 'Manufacturer',
                     'url'  => '#',
