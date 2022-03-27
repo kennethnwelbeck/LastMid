@@ -18,6 +18,7 @@ class CreateOrdersTable extends Migration
             $table->string('invoice');
             $table->string('date');
             $table->string('notes');
+            
             $table->foreignId('hardware_id')->nullable()->constrained('hardware')->defualt(NULL);
             $table->timestamps();
         });
