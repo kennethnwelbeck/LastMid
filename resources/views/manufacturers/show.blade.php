@@ -21,7 +21,10 @@
                 <b>Sales:</b> {{ $manufacturers->sales }} |
                 <b>Tech Support:</b> {{ $manufacturers->tech }} |
                 @if($manufacturers->hardware_id != NULL)
-                <b>Hardware ID:</b><a href="{{ route('hardware.show', ['hardware'=>$manufacturers->hardware_id]) }}">{{ $manufacturer->hardware->name }}</a>
+                <b>Hardware ID:</b>
+                @foreach($hardware AS $hardware)
+                <a href="{{ route('hardware.show', ['hardware'=>$manufacturers->hardware_id]) }}">{{ $hardware->name }}</a>
+                @endforeach
                 @endif
             </div>
         <button type="submit" class="btn btn-primary">DELETE</button>
