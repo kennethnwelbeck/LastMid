@@ -21,9 +21,10 @@
                 <b>Sales:</b> {{ $manufacturers->sales }} |
                 <b>Tech Support:</b> {{ $manufacturers->tech }} |
                 @if($manufacturers->hardware_id != NULL)
-                <b>Hardware ID:</b>
-                @foreach($manufacturers->hardware AS $hardware)
-               <a href="{{ route('hardware.show', ['hardware'=>$manufacturers->hardware_id]) }}">{{ $hardware->name }}</a>
+                foreach($hardware as $hardware)
+                @if($hardware->id == $manufacturers->hardware_id)
+                <b>Hardware ID:</b><a href="{{ route('hardware.show', ['hardware'=>$manufacturers->hardware_id]) }}">{{ $hardware->id.' '.$hardware->name }}</a>
+                @endif
                 @endforeach
                 @endif
             </div>
