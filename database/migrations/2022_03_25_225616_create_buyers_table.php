@@ -14,7 +14,7 @@ class CreateBuyersTable extends Migration
             $table->string('last');
             $table->string('email');
             $table->string('phone');
-            $table->foreignId('order_id')->nullable()->constrained('orders')->defualt(NULL);
+            $table->foreignId('order_id')->nullable()->constrained()->defualt(NULL);
             $table->foreignId('hardware_id')->nullable()->constrained('hardware')->defualt(NULL);
             $table->timestamps();
         });
