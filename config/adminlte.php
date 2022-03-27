@@ -234,7 +234,7 @@ return [
             'text'    => 'View Hardware By',
             'submenu' => [ 
                         [
-                            'text' => 'Category: Computers',
+                            'text' => 'Category: Desktops',
                             'url'  => '#',
                         ],
                         [
