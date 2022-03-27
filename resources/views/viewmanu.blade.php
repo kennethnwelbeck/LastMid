@@ -18,7 +18,7 @@
                 @foreach($hardware AS $hardware)
                
                 <li><a href="{{ route('manufacturers.show', ['manufacturer'=>$manufacturer->id]) }}">{{ $manufacturer->name }}</a> | 
-                <b>Hardware:</b><a href="{{ route('hardware.show', ['hardware'=>$hardware->id]) }}">{{ $hardware->id.' '.$hardware->name }}</a></li>
+                <b>Hardware:</b><a href="{{ route('hardware.show', ['hardware'=>$manufacture->hardware_id]) }}">{{ $hardware->id.' '.$hardware->name }}</a></li>
                 
                 @endforeach
                 @endforeach
