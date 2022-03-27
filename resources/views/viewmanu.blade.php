@@ -19,7 +19,7 @@
                
                 <li><a href="{{ route('manufacturers.show', ['manufacturer'=>$manufacturer->id]) }}">{{ $manufacturer->name }}</a> | 
                 <b>Hardware:</b><a href="{{ route('hardware.show', ['hardware'=>$hardware->id]) }}">{{ $hardware->id.' '.$hardware->name }}</a></li>
-                @endif
+                
                 @endforeach
                 @endforeach
 
