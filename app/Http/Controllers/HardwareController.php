@@ -14,7 +14,7 @@ class HardwareController extends Controller
         $hardware = Hardware::all();
         return view('hardware', compact('hardware'));
     }
-    
+
     public function create()
     {
         return view('hardware.create');
@@ -95,17 +95,18 @@ class HardwareController extends Controller
         $hardware->save();
         return view('hardware.show',compact('hardware'));
     }
-
-
-
-
-
-
+    
     public function destroy($id)
     {
         $hardware = Hardware::find($id);
         $hardware ->delete();
         return redirect('/hardware');
+    }
+
+    public function desktops()
+    {
+        $hardware = Hardware::all();
+        return view('hardware.desktops', compact('hardware'));
     }
 }
 
