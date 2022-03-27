@@ -15,13 +15,13 @@
     @csrf
     <input type="hidden" name="_method" value="PUT">
         <div class="row">
-        <x-adminlte-input name="first" label="First Name" fgroup-class="col-md-6" />
-        <x-adminlte-input name="last" label="Last Name" fgroup-class="col-md-6"  />
-        <x-adminlte-input name="email" label="Email" fgroup-class="col-md-6"  />
-        <x-adminlte-input name="phone" label="Phone Number" fgroup-class="col-md-6"  />
-        <x-adminlte-select name="hardware_id" label="Hardware" fgroup-class="col-md-6" >    
+        <x-adminlte-input name="first" label="First Name"  value="{{ old('first', $buyers->first) }}" fgroup-class="col-md-6" />
+        <x-adminlte-input name="last" label="Last Name"  value="{{ old('last', $buyers->last) }}" fgroup-class="col-md-6"  />
+        <x-adminlte-input name="email" label="Email"  value="{{ old('email', $buyers->email) }}" fgroup-class="col-md-6"  />
+        <x-adminlte-input name="phone" label="Phone Number"  value="{{ old('phone', $buyers->phone) }}" fgroup-class="col-md-6"  />
+        <x-adminlte-select name="hardware_id" label="Hardware" value="{{ old('hardware_id', $buyers->hardware_id) }}" fgroup-class="col-md-6" >    
         @foreach($hardware AS $hardware)
-        <option value="{{ $hardware->id }}"> {{$hardware->id.' '.$hardware->name }} </option>
+        <option value="{{ $hardware->id }}" {{ $buyers->hardware_id == $hardware->id ? "selected" : "" }}> {{$hardware->id.' '.$hardware->name }} </option>
         @endforeach
         </x-adminlte-select>
     
