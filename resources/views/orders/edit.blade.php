@@ -15,8 +15,8 @@
     @csrf
     <input type="hidden" name="_method" value="PUT">
         <div class="row">
-        <x-adminlte-input name="invoice" value="{{ old('invoice', $order->invoice) }}" label="Invoice Number" fgroup-class="col-md-6" />
-        <x-adminlte-input name="date" value="{{ old('date', $order->date) }}" label="Purchase Date" fgroup-class="col-md-6"  />
+        <x-adminlte-input name="invoice" value="{{ old('invoice', $orders->invoice) }}" label="Invoice Number" fgroup-class="col-md-6" />
+        <x-adminlte-input name="date" value="{{ old('date', $orders->date) }}" label="Purchase Date" fgroup-class="col-md-6"  />
         <x-adminlte-select name="buyer_id" label="User" fgroup-class="col-md-6" value="{{ old('buyer_id', $orders->buyer_id) }}" >    
         @foreach($buyers AS $buyer)
         <option value="{{ $buyer->id }}" $orders->buyer_id == $buyer->id ? "selected" : ""> {{ $buyer->id.' '.$buyer->first.' '.$buyer->last }} </option>
