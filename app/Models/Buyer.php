@@ -8,15 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Buyer extends Model
 {
     use HasFactory;
-    protected $fillable = ['first','last','email','phone', 'order_id','hardware_id',];
+    protected $fillable = ['first','last','email','phone', 'hardware_id',];
     public $timestamps = false;
     
 }
 
-function hardware(){
+function hardwarew(){
     return $this->hasMany(Hardware::class);
-}
-
-function order(){
-    return $this->hasMany(Order::class);
 }
