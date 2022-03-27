@@ -22,7 +22,7 @@
                 <b>Tech Support:</b> {{ $manufacturers->tech }} |
                 @if($manufacturers->hardware_id != NULL)
                 <b>Hardware ID:</b>
-                @foreach(manufacturers->hardware AS $hardware)
+                @foreach($manufacturers->hardware AS $hardware)
                <a href="{{ route('hardware.show', ['hardware'=>$manufacturers->hardware_id]) }}">{{ $hardware->name }}</a>
                 @endforeach
                 @endif
