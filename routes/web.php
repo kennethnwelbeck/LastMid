@@ -5,6 +5,7 @@ use App\Http\Controllers\HardwareController;
 use App\Http\Controllers\ManufacturerController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\BuyerController;
+use App\Http\Controllers\DesktopController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
