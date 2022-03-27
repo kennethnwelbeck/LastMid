@@ -15,9 +15,8 @@
     @csrf
     <input type="hidden" name="_method" value="PUT">
         <div class="row">
-        <x-adminlte-input name="invoice" label="Invoice Number" fgroup-class="col-md-6" />
-        <x-adminlte-input name="date" label="Purchase Date" fgroup-class="col-md-6"  />
-        <x-adminlte-input name="notes" label="Notes" fgroup-class="col-md-6"  />
+        <x-adminlte-input name="invoice" value="{{ old('invoice', $hardware->invoice) }}" label="Invoice Number" fgroup-class="col-md-6" />
+        <x-adminlte-input name="date" value="{{ old('date', $hardware->date) }}" label="Purchase Date" fgroup-class="col-md-6"  />
         <x-adminlte-button type="Submit" label="Submit" />
         </div>
                 </form>

@@ -19,7 +19,21 @@
             <div class="card-body">
                 {{ $orders->invoice }} | 
                 <b>Date:</b> {{ $orders->date }} |
-                <b>Notes:</b> {{ $orders->notes }} |
+                @if($orders->buyers_id != NULL)
+                @foreach($hardware as $hardware)
+                @if($hardware->id == $orders->buyer_id)
+                <b>Hardware:</b><a href="{{ route('buyers.show', ['buyer'=>$orders->buyer_id]) }}">{{ $buyer->id.' '.$buyer->first.' '.$buyer->last }}</a> |
+                @endif
+                @endforeach
+                @endif
+
+                @if($orders->hardware_id != NULL)
+                @foreach($hardware as $hardware)
+                @if($hardware->id == $orders->hardware_id)
+                <b>Hardware:</b><a href="{{ route('hardware.show', ['hardware'=>$orders->hardware_id]) }}">{{ $hardware->id.' '.$hardware->name }}</a>
+                @endif
+                @endforeach
+                @endif
                 
             </div>
         <button type="submit" class="btn btn-primary">DELETE</button>

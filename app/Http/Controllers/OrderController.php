@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Order;
-
+use App\Models\Hardware;
+use App\Models\Buyer;
 
 class OrderController extends Controller
 {
@@ -18,7 +19,9 @@ class OrderController extends Controller
 
     public function create()
     {
-        return view('orders.create');
+        $hardware = Hardware::all();
+        $buyers = Buyer::all();
+        return view('orders.create', compact('hardware', 'buyers'));
     }
 
     public function store(Request $request)
@@ -26,13 +29,15 @@ class OrderController extends Controller
         $validated = $request->validate([
             'invoice' => 'required',
             'date' => 'required',
-            'notes' => 'required',
+            'buyer_id'=> 'required',
+            'hardware_id'=> 'required',
        ]);
 
        $orders = Order::create([
         'invoice' => $request->invoice,
         'date' => $request->date,
-        'notes' => $request->notes,
+        'buyer_id'=> $request->buyer_id,
+        'hardware_id'=> $request->hardware_id,
         
        ]);
 
@@ -43,14 +48,18 @@ class OrderController extends Controller
     public function show($id)
     {
         $orders = Order::find($id);
-        return view('orders.show', compact('orders'));
+        $hardware = Hardware::all();
+        $buyers = Buyer::all();
+        return view('orders.show', compact('hardware', 'buyers', 'orders'));
     }
 
 
     public function edit($id)
     {
         $orders = Order::find($id);
-        return view('orders.edit', compact('orders'));
+        $hardware = Hardware::all();
+        $buyers = Buyer::all();
+        return view('orders.edit', compact('hardware', 'buyers', 'orders'));
     }
 
 
@@ -60,13 +69,15 @@ class OrderController extends Controller
         $validated =$request->validate([
             'invoice' => 'required',
             'date' => 'required',
-            'notes' => 'required',
+            'buyer_id'=> 'required',
+            'hardware_id'=> 'required',
         ]);
 
         $orders->fill([
             'invoice' => $request->invoice,
             'date' => $request->date,
-            'notes' => $request->notes,
+            'buyer_id'=> $request->buyer_id,
+            'hardware_id'=> $request->hardware_id,
         ]);
 
         $orders->save();

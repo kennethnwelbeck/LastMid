@@ -12,3 +12,11 @@ class Buyer extends Model
     public $timestamps = false;
     
 }
+
+function hardware(){
+    return $this->hasMany(Hardware::class);
+}
+
+function order(){
+    return $this->belongsTo(Order::class);
+}

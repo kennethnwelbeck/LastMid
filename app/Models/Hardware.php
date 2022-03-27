@@ -15,3 +15,7 @@ class Hardware extends Model
 function manufacturer(){
     return $this->belongsTo(Manufacturer::class);
 }
+
+function order(){
+    return $this->belongsTo(Order::class);
+}
