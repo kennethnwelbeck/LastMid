@@ -12,7 +12,7 @@ class Order extends Model
     public $timestamps = false;
 }
 
-function hardware(){
+function hardwarew(){
     return $this->hasMany(Hardware::class);
 }
 
