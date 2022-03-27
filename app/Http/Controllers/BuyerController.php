@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Buyer;
+use App\Models\Hardware;
+use App\Models\Order;
 
 
 class BuyerController extends Controller
