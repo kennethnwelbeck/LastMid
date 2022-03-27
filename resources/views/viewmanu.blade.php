@@ -16,7 +16,7 @@
             <div class="card-body">
                 @foreach($manufacturers AS $manufacturer)
                 @foreach($hardware AS $hardware)
-                @if(manufacturers->hardware_id == $hardware->id)
+                @if($manufacturer->hardware_id == $hardware->id)
                 <li><a href="{{ route('manufacturers.show', ['manufacturer'=>$manufacturer->id]) }}">{{ $manufacturer->name }}</a> | 
                 <b>Hardware:</b><a href="{{ route('hardware.show', ['hardware'=>$hardware->id]) }}">{{ $hardware->id.' '.$hardware->name }}</a></li>
                 @endif
