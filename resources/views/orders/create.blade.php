@@ -17,7 +17,7 @@
 
         <x-adminlte-input name="invoice" label="Invoice Number" fgroup-class="col-md-6" />
         <x-adminlte-input name="date" label="Purchase Date" fgroup-class="col-md-6"  />
-        <x-adminlte-select name="buyers_id" label="User" fgroup-class="col-md-6" >    
+        <x-adminlte-select name="buyer_id" label="User" fgroup-class="col-md-6" >    
         @foreach($buyers AS $buyer)
         <option value="{{ $buyer->id }}"> {{ $buyer->id.' '.$buyer->first.' '.$buyer->last }} </option>
         @endforeach
