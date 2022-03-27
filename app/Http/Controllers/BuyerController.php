@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Buyer;
 use App\Models\Hardware;
-use App\Models\Order;
 
 
 class BuyerController extends Controller
@@ -21,8 +20,7 @@ class BuyerController extends Controller
     public function create()
     {
         $hardware = Hardware::all();
-        $orders = Order::all();
-        return view('buyers.create', compact('hardware', 'orders'));
+        return view('buyers.create', compact('hardware'));
     }
 
     public function store(Request $request)
@@ -32,7 +30,6 @@ class BuyerController extends Controller
             'last' => 'required',
             'email' => 'required',
             'phone' => 'required',
-            'order_id' => 'required',
             'hardware_id' => 'required',
        ]);
 
@@ -41,7 +38,6 @@ class BuyerController extends Controller
         'last' => $request->last,
         'email' => $request->email,
         'phone' => $request->phone,
-        'order_id' => $request->order_id,
         'hardware_id' => $request->hardware_id,
         
        ]);
@@ -54,8 +50,7 @@ class BuyerController extends Controller
     {
         $buyers = Buyer::find($id);
         $hardware = Hardware::all();
-        $orders = Order::all();
-        return view('buyers.show', compact('hardware', 'orders','buyers'));
+        return view('buyers.show', compact('hardware', 'buyers'));
     }
 
 
@@ -63,8 +58,7 @@ class BuyerController extends Controller
     {
         $buyers = Buyer::find($id);
         $hardware = Hardware::all();
-        $orders = Order::all();
-        return view('buyers.edit', compact('hardware', 'orders','buyers'));
+        return view('buyers.edit', compact('hardware', 'buyers'));
     }
 
 
@@ -76,7 +70,6 @@ class BuyerController extends Controller
             'last' => 'required',
             'email' => 'required',
             'phone' => 'required',
-            'order_id' => 'required',
             'hardware_id' => 'required',
         ]);
 
@@ -85,7 +78,6 @@ class BuyerController extends Controller
             'last' => $request->last,
             'email' => $request->email,
             'phone' => $request->phone,
-            'order_id' => $request->order_id,
             'hardware_id' => $request->hardware_id,
             ]);
 
