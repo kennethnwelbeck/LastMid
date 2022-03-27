@@ -228,28 +228,28 @@ return [
         // Navbar items:
         [
             'text' => 'Hardware',
-            'url'  => '#',
+            'url'  => '/hardware',
         ], 
         [
             'text'    => 'View Hardware By',
             'submenu' => [ 
                         [
-                            'text' => 'Category: Desktops',
-                            'url'  => '#',
+                            'text' => 'Type: Desktops',
+                            'url'  => '/desktops',
                         ],
                         [
-                            'text' => 'Category: Laptops',
-                            'url'  => '#',
+                            'text' => 'Type: Laptops',
+                            'url'  => '/laptops',
                         ],
                         [
-                            'text' => 'Category: Tablets',
-                            'url'  => '#',
+                            'text' => 'Type: Tablets',
+                            'url'  => '/tablets',
                         ],
                     
             
                 [
                     'text' => 'Manufacturer',
-                    'url'  => '#',
+                    'url'  => '',
                 ],
                 [
                     'text' => 'User',
@@ -260,15 +260,15 @@ return [
         ],
         [
             'text' => 'Orders',
-            'url'  => '#',
+            'url'  => '/orders',
         ],
         [
             'text' => 'Manufacturers',
-            'url'  => '#',
+            'url'  => '/manufacturers',
         ],
         [
             'text' => 'Users',
-            'url'  => '#',
+            'url'  => '/users',
         ],
     ],
 
