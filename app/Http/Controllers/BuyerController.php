@@ -18,7 +18,9 @@ class BuyerController extends Controller
 
     public function create()
     {
-        return view('buyers.create');
+        $hardware = Hardware::all();
+        $orders = Order::all();
+        return view('buyers.create', compact('hardware', 'orders'));
     }
 
     public function store(Request $request)
@@ -28,6 +30,8 @@ class BuyerController extends Controller
             'last' => 'required',
             'email' => 'required',
             'phone' => 'required',
+            'order_id' => 'required',
+            'hardware_id' => 'required',
        ]);
 
        $buyers = Buyer::create([
@@ -35,6 +39,8 @@ class BuyerController extends Controller
         'last' => $request->last,
         'email' => $request->email,
         'phone' => $request->phone,
+        'order_id' => $request->order_id,
+        'hardware_id' => $request->hardware_id,
         
        ]);
 
@@ -45,14 +51,18 @@ class BuyerController extends Controller
     public function show($id)
     {
         $buyers = Buyer::find($id);
-        return view('buyers.show', compact('buyers'));
+        $hardware = Hardware::all();
+        $orders = Order::all();
+        return view('buyers.show', compact('hardware', 'orders','buyers'));
     }
 
 
     public function edit($id)
     {
         $buyers = Buyer::find($id);
-        return view('buyers.edit', compact('buyers'));
+        $hardware = Hardware::all();
+        $orders = Order::all();
+        return view('buyers.edit', compact('hardware', 'orders','buyers'));
     }
 
 
@@ -64,6 +74,8 @@ class BuyerController extends Controller
             'last' => 'required',
             'email' => 'required',
             'phone' => 'required',
+            'order_id' => 'required',
+            'hardware_id' => 'required',
         ]);
 
         $buyers->fill([
@@ -71,7 +83,9 @@ class BuyerController extends Controller
             'last' => $request->last,
             'email' => $request->email,
             'phone' => $request->phone,
-        ]);
+            'order_id' => $request->order_id,
+            'hardware_id' => $request->hardware_id,
+            ]);
 
         $buyers->save();
         return view('buyers.show',compact('buyers'));

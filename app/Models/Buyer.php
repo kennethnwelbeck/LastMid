@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Buyer extends Model
 {
     use HasFactory;
-    protected $fillable = ['first','last','email','phone'];
+    protected $fillable = ['first','last','email','phone', 'orders_id','hardware_id',];
     public $timestamps = false;
     
 }
