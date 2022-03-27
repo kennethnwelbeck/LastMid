@@ -8,6 +8,8 @@ use App\Http\Controllers\BuyerController;
 use App\Http\Controllers\DesktopController;
 use App\Http\Controllers\LaptopController;
 use App\Http\Controllers\TabletController;
+use App\Http\Controllers\ViewManufacturerController;
+use App\Http\Controllers\ViewUserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,3 +61,5 @@ Route::resource('/tablets', TabletController::class);
 Route::resource('/manufacturers', ManufacturerController::class);
 Route::resource('/orders', OrderController::class);
 Route::resource('/buyers', BuyerController::class);
+Route::resource('/viewuser', ViewUserController::class);
+Route::resource('/viewmanu', ViewManufacturerController::class);

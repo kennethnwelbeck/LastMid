@@ -268,7 +268,7 @@ return [
         ],
         [
             'text' => 'Users',
-            'url'  => '/users',
+            'url'  => '/buyers',
         ],
     ],
 
